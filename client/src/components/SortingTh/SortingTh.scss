@@ -1,0 +1,23 @@
+.sorting-th {
+    cursor: pointer;
+    border: 1px gray solid;
+    background-color: aliceblue;
+
+    &--selected {
+        background-color: antiquewhite;
+
+        &::after {
+            content: ' ';
+            border-top: none;
+            border-left: 10px transparent solid;
+            border-right: 10px transparent solid;
+            border-bottom: 10px red solid;
+            display: inline-block;
+            right: 0;
+        }
+    }
+
+    &--reverse::after {
+        transform: rotate(180deg);
+    }
+}

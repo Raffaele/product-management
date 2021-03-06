@@ -1,0 +1,13 @@
+.product-display {
+    &__products-per-page {
+        background-color: azure;
+        padding: 5px;
+        display: flex;
+        justify-content: space-around;
+        
+        select {
+            display: inline-block;
+            width: 50%;
+        }
+    }
+}
