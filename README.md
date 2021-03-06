@@ -13,15 +13,19 @@ Divided in 2 parts:
 6. Once the server is running, run `npm start` (or `yarn start`) in client as well.
 7. The restful server will run in port `2200` of localhost, the client in port `3000`.
 
+## My choices
 I was more focused on the front-end part than on the  back-end.
+I've chosen react hooks as I consider it a quicker solution for this problem. In particular I've used the hooks related to context.
+I implemented one page for show a table with the products and another one with the possibility to create a product or update an existing one. To implement this I've imported [react-router-dom](https://reactrouter.com/web/guides/quick-start).
+To have a nice UI I've decided to use [reactstrap](https://reactstrap.github.io/).
 
-Basic requirements:
+## Basic requirements (all done):
 1. Pull a set of products from a persistence layer (I've used fetch)
 2. List the above products in a UI (react, reactstrap)
 3. Sort the products by Name, Size, and Category in the UI. In the data there was not a "size" to allow a sort on that.
 4. Keep the products persisted even after the application has shutdown. Persistency is generally done in back-end, in this particular case I've added a support with `localStorage` in case of API failures.
 
-Extra requirements:
+## Extra requirements (the once I didn't implement are marked with :x:):
 1. Include a create product feature :white_check_mark:
 1.1 Challenge: Validate that the Last Purchase Date cannot be less than the creation date :x:
 2. Include a delete product feature :white_check_mark:
@@ -30,6 +34,8 @@ Extra requirements:
 4. Paginate the list of products by 5, 10, and 20 :white_check_mark:
 5. Add a feature to get the product with the oldest Last Purchased Date from a single category :x:
 6. Generate purchase statistics :x:
+
+## Uncompleted tasks
 
 * For extra feature `1.1` we can create dates with `new Date()` api and compare the dates.
 
